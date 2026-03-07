@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "talaria-core"
 version = "0.1.0"
 description = "Core agent and CLI for Talaria."
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 
 dependencies = [
     "openai>=1.0.0",
@@ -44,11 +44,11 @@ python_functions = ["test_*"]
 addopts = "-v --strict-markers --tb=short"
 
 [tool.ty]
-python-version = "3.11"
+python-version = "3.12"
 
 [tool.ruff]
 line-length = 100
-target-version = "py311"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = ["E", "F", "W", "I", "N", "UP", "B", "C4"]

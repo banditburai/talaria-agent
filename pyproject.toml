@@ -2,7 +2,7 @@
 name = "talaria"
 version = "0.1.0"
 description = "Talaria - A modular AI agent system (development workspace)"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 
 [dependency-groups]
 dev = [
