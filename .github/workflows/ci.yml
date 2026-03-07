@@ -26,4 +26,4 @@ jobs:
         run: uv run ty check talaria/talaria-core/src/
         
       - name: Test
-        run: uv run pytest --co -q
+        run: PYTHONPATH=talaria/talaria-core/src uv run pytest talaria/talaria-core/tests/
