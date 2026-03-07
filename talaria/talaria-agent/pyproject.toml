@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "talaria-agent"
+version = "0.1.0"
+description = "A modular AI agent system with optional messaging integrations."
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "talaria-core>=0.1.0",
+]
+
+[project.optional-dependencies]
+gateway = ["talaria-gateway>=0.1.0"]
+telegram = ["talaria-telegram>=0.1.0"]
+discord = ["talaria-discord>=0.1.0"]
+slack = ["talaria-slack>=0.1.0"]
+skills = ["talaria-skills>=0.1.0"]
+rl = ["talaria-rl>=0.1.0"]
+full = [
+    "talaria-gateway>=0.1.0",
+    "talaria-telegram>=0.1.0",
+    "talaria-discord>=0.1.0",
+    "talaria-skills>=0.1.0",
+    "talaria-rl>=0.1.0",
+]
+
+[project.scripts]
+talaria = "talaria.core.cli:main"
