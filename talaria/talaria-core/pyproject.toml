@@ -6,7 +6,6 @@ build-backend = "hatchling.build"
 name = "talaria-core"
 version = "0.1.0"
 description = "Core agent and CLI for Talaria."
-readme = "README.md"
 requires-python = ">=3.11"
 
 dependencies = [
