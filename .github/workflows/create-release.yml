@@ -43,7 +43,7 @@ jobs:
         
         IFS='.' read -r MAJOR MINOR PATCH <<< "$CURRENT_VERSION"
         
-        RELEASE_TYPE="${{ inputs.release_type }}"
+        RELEASE_TYPE="${{ github.event.inputs.release_type }}"
         case $RELEASE_TYPE in
           major)
             NEW_MAJOR=$((MAJOR + 1))
@@ -107,7 +107,7 @@ jobs:
     - name: Create and push tag
       run: |
         VERSION="v${{ steps.version.outputs.new }}"
-        TYPE="${{ inputs.release_type }}"
+        TYPE="${{ github.event.inputs.release_type }}"
         
         git tag -a "$VERSION" -m "Release $VERSION ($TYPE release)"
         git push origin "$VERSION"
