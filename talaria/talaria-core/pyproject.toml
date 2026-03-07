@@ -27,7 +27,7 @@ dev = [
     "pytest-cov>=4.0.0",
     "pytest-mock>=3.10.0",
     "ruff>=0.1.0",
-    "mypy>=1.0.0",
+    "ty>=0.1.0",
     "hypothesis>=6.0.0",
 ]
 
@@ -43,11 +43,8 @@ python_files = ["test_*.py"]
 python_functions = ["test_*"]
 addopts = "-v --strict-markers --tb=short"
 
-[tool.mypy]
-python_version = "3.11"
-strict = true
-warn_return_any = true
-warn_unused_configs = true
+[tool.ty]
+python-version = "3.11"
 
 [tool.ruff]
 line-length = 100
